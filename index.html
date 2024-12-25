@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Teste</title>
     <link rel="stylesheet" href="css/estilo.css">
-   
 </head>
 <body>
     <h1>Formulário sobre barbearia</h1>
@@ -17,86 +16,82 @@
 
         <p>Digite seu email: <input type="text" placeholder="nome@gmail.com"></p>
 
-        <p>Digite seu Número de telefone: <input type="text" placeholder="+11 (11) 1 1111-"></p>
+        <p>Digite seu Número de telefone: <input type="text" placeholder="+11 (11) 1 1111-1111"></p>
 
         <p>Digite a data do seu atendimento: 
             <input type="date" name="mes">
         </p>
 
-        <p> Qual foi o horário do seu atendimento? 
-            <input type="checkbox" name="" value=""  /> Manhã
-            <input type="checkbox" name="" value="" /> Tarde
-            <input type="checkbox" name="" value="" /> Noite
-        </p>
+        <p>Qual foi o horário do seu atendimento?</p>
+        <div class="radio-group">
+            <label><input type="checkbox" name="horario" value="manha" /> Manhã</label>
+            <label><input type="checkbox" name="horario" value="tarde" /> Tarde</label>
+            <label><input type="checkbox" name="horario" value="noite" /> Noite</label>
+        </div>
 
+        <p>Como você avalia a qualidade do corte de cabelo?</p>
+        <div class="radio-group">
+            <label><input type="radio" name="corte" value="excelente" /> Excelente</label>
+            <label><input type="radio" name="corte" value="boa" /> Boa</label>
+            <label><input type="radio" name="corte" value="regular" /> Regular</label>
+        </div>
 
+        <p>Digite o nome do barbeiro que lhe atendeu:</p>
+        <input type="text" placeholder="Pedro">
 
-        <p> Como você avalia a qualidade do corte de cabelo?
-            <input type="radio" name="tipo" /> Exelente
-            <input type="radio" name="tipo" /> Boa
-            <input type="radio" name="tipo" /> Regular
-        </p>
-        <p>
-            Digite o nome do barbeiro que lhe atendeu:
-            <input type="text" placeholder="Pedro">
-        </p>
+        <p>Como você avalia o atendimento recebido por ele?</p>
+        <div class="rating">
+            <input type="radio" id="rating1" name="rating" value="1">
+            <label for="rating1">☆</label>
 
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2">☆</label>
 
-        <form>
-            <p>Como você avalia o atendimento recebido por ele?</p>
-            <div>
-              <input type="radio" id="rating1" name="rating" value="1">
-              <label for="rating1">☆</label>
-          
-              <input type="radio" id="rating2" name="rating" value="2">
-              <label for="rating2">☆☆</label>
-          
-              <input type="radio" id="rating3" name="rating" value="3">
-              <label for="rating3">☆☆☆</label>
-          
-              <input type="radio" id="rating4" name="rating" value="4">
-              <label for="rating4">☆☆☆☆</label>
-          
-              <input type="radio" id="rating5" name="rating" value="5">
-              <label for="rating5">☆☆☆☆☆</label>
-            </div>
-          </form>
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3">☆</label>
 
-        <p> O ambiente da barbearia foi agradável?: 
-            <input type="radio" name="tipo2" /> Sim
-            <input type="radio" name="tipo2" /> Mais ou menos
-            <input type="radio" name="tipo2" /> Não
-        </p>
-        
-        <p> Você recomendaria nossa barbearia para amigos e familiares?: 
-            <input type="radio" name="tipo2" /> 👍
-            <input type="radio" name="tipo2" /> 👎
-        </p>
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4">☆</label>
 
-        <p> Como você  classificaria o tempo de espera?
-            <input type="radio" name="tipo2" /> Rápido 😁
-            <input type="radio" name="tipo2" /> Adequado 😐
-            <input type="radio" name="tipo2" /> Demorado 😡
-        </p>
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5">☆</label>
+        </div>
 
-        <p>  Em qual das nossas sedes você cortou seu cabelo?
-            <select name="Status">
-                <option value="Sedes">Sedes</option>
-                <option value="Picuí - PB">Picu - PB</option>
-                <option value="Cuite - PB">Cuite - PB</option>  
-                <option value="Jaçanã - RN">Jaçanã - RN</option>
-                <option value="Damião - PB">Damião - PB</option>
-                <option value="Nova Floresta - PB">Nova Floresta - PB</option>
-                <option value="Nova Palmeira - PB">Nova Palmeira - PB</option>  
-            </select>
-        </p>
+        <p>O ambiente da barbearia foi agradável?</p>
+        <div class="radio-group">
+            <label><input type="radio" name="ambiente" value="sim" /> Sim</label>
+            <label><input type="radio" name="ambiente" value="mais-ou-menos" /> Mais ou menos</label>
+            <label><input type="radio" name="ambiente" value="nao" /> Não</label>
+        </div>
 
-        <p>
-            <textarea name="" id="" placeholder="Digite aqui um pouco sobre sua experiência em nossa barbearia!"></textarea>
-        </p>
- 
-    
-        <a class="button" href="pag.html">Enviar</a>
+        <p>Você recomendaria nossa barbearia para amigos e familiares?</p>
+        <div class="radio-group">
+            <label><input type="radio" name="recomendaria" value="sim" /> 👍</label>
+            <label><input type="radio" name="recomendaria" value="nao" /> 👎</label>
+        </div>
+
+        <p>Como você classificaria o tempo de espera?</p>
+        <div class="radio-group">
+            <label><input type="radio" name="tempo" value="rapido" /> Rápido 😁</label>
+            <label><input type="radio" name="tempo" value="adequado" /> Adequado 😐</label>
+            <label><input type="radio" name="tempo" value="demorado" /> Demorado 😡</label>
+        </div>
+
+        <p>Em qual das nossas sedes você cortou seu cabelo?</p>
+        <select name="sede">
+            <option value="Sedes">Sedes</option>
+            <option value="Picuí - PB">Picuí - PB</option>
+            <option value="Cuité - PB">Cuité - PB</option>
+            <option value="Jaçanã - RN">Jaçanã - RN</option>
+            <option value="Damião - PB">Damião - PB</option>
+            <option value="Nova Floresta - PB">Nova Floresta - PB</option>
+            <option value="Nova Palmeira - PB">Nova Palmeira - PB</option>  
+        </select>
+
+        <p>Digite aqui um pouco sobre sua experiência em nossa barbearia:</p>
+        <textarea placeholder="Escreva sua opinião..."></textarea>
+
+        <a class="button" href="pages/corfimacao.html">Enviar</a>
         <input type="reset">
     </form>
 </body>
