@@ -11,6 +11,29 @@ body {
     min-height: 100vh;
 }
 
+.top {
+    width: 80%;
+    max-width: 600px;
+    background-color: #1f2130;
+    border-radius: 12px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); 
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.top:hover {
+    transform: translateY(-10px);
+}
+
+.top img {
+    max-width: 50%;
+    height: auto; 
+    border-radius: 0px 20px 40px 0px;
+}
 
 form {
     width: 80%;
@@ -27,18 +50,17 @@ form:hover {
     transform: scale(1.02); 
 }
 
-/* Título do formulário */
 form h1 {
     font-size: 2.5em;
-    color: #f39c12; /* Cor dourada para o título */
+    color: #f39c12; 
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Subtítulo do formulário */
+
 form h2 {
     font-size: 1.4em;
-    color: #ecf0f1; /* Texto claro para contraste */
+    color: #ecf0f1; 
     margin-bottom: 20px;
     text-align: center;
 }
@@ -92,44 +114,38 @@ label {
     cursor: pointer;
 }
 
-/* Estilo para o conjunto de estrelas de avaliação */
+
 div.rating {
     display: flex;
-    justify-content: center; /* Alinha as estrelas no centro */
-    gap: 10px; /* Espaço entre as estrelas */
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Esconde os inputs de rádio (eles são invisíveis, mas funcionam) */
 div.rating input[type="radio"] {
-    display: none; /* Esconde os botões de rádio */
+    display: none; 
 }
 
-/* Estilo para as estrelas (labels) */
 div.rating label {
-    font-size: 2.5em; /* Tamanho da estrela */
-    color: #7f8c8d; /* Cor das estrelas não selecionadas (cinza) */
-    cursor: pointer; /* Aponta o cursor quando passa sobre a estrela */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e escala */
+    font-size: 2.5em; 
+    color: #7f8c8d;
+    cursor: pointer; 
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
-/* Efeito quando o botão de rádio é selecionado */
 div.rating input[type="radio"]:checked ~ label {
-    color: #f39c12; /* Cor dourada para as estrelas selecionadas */
+    color: #f39c12; 
 }
 
-/* Efeito de hover: quando o mouse passa sobre as estrelas */
 div.rating input[type="radio"]:hover ~ label,
 div.rating label:hover {
-    color: #f39c12; /* Torna dourada a estrela sobre a qual o mouse está */
-    transform: scale(1.2); /* Aumenta de tamanho quando o mouse passa sobre a estrela */
+    color: #f39c12;
+    transform: scale(1.2);
 }
 
-/* Quando o radio é selecionado, a estrela correspondente muda para dourado */
 div.rating input[type="radio"]:checked + label {
-    color: #f39c12; /* Torna dourada a estrela que foi clicada */
+    color: #f39c12;
 }
 
-/* Estilo do campo de seleção (Sede) */
 select {
     width: 100%;
     padding: 12px;
@@ -141,10 +157,9 @@ select {
     color: #fff;
 }
 
-/* Estilo do botão de envio e reset */
 input[type="reset"],
 a.button {
-    background-color: #f39c12; /* Cor dourada para os botões */
+    background-color: #f39c12;
     color: #fff;
     padding: 12px 25px;
     border-radius: 8px;
@@ -160,15 +175,13 @@ a.button {
 
 input[type="reset"]:hover,
 a.button:hover {
-    background-color: #e67e22; /* Tom mais escuro de dourado ao passar o mouse */
+    background-color: #e67e22; 
 }
 
-/* Estilo da área de texto (textarea) */
 textarea {
     height: 120px;
 }
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     form {
         width: 90%;
